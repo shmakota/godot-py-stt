@@ -15,7 +15,7 @@ func _ready():
 	server.listen(6001)
 
 func recognize_file():
-	socket.put_packet(filepath.to_ascii_buffer())
+	socket.put_packet(filePath.to_ascii_buffer())
 
 func _physics_process(delta):
 	# check for response
