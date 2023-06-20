@@ -1,4 +1,4 @@
-# godot-py-stt
+# Godot/Python Speech To Text
 requires speech_recognition and socket
 
 (written by ChatGPT)
