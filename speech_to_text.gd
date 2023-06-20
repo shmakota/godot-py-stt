@@ -4,7 +4,7 @@ class_name SpeechToText
 var socket = PacketPeerUDP.new()
 var server = UDPServer.new()
 
-@export var filepath = ""
+@export var filePath = ""
 
 func _ready():
 	# execute python script with godot
