@@ -4,6 +4,8 @@ class_name SpeechToText
 var socket = PacketPeerUDP.new()
 var server = UDPServer.new()
 
+@export var filepath = ""
+
 func _ready():
 	# execute python script with godot
 	var output
@@ -12,8 +14,8 @@ func _ready():
 	socket.set_dest_address("127.0.0.1", 6000)
 	server.listen(6001)
 
-func recognize_file(path = "D:/godot_4/projects/tinyppl/mazerunner.wav"):
-	socket.put_packet(path.to_ascii_buffer())
+func recognize_file():
+	socket.put_packet(filepath.to_ascii_buffer())
 
 func _physics_process(delta):
 	# check for response
